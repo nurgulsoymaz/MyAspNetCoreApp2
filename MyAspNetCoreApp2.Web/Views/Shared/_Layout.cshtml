@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyAspNetCoreApp2.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyAspNetCoreApp2.Web.styles.css" asp-append-version="true" />
+</head>
+@await RenderSectionAsync("css", required: false)
+<body>
+ @*  header eklenecek buraya*@
+    <partial name="_HeaderPartialView"/>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+  @*  buraya footer eklencek*@
+    <partial name="_FooterPartialView"/>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+  @*  RenderSectionAsync bu alan extra kod ekleme alanını gösterir. buradaki "scripts" herhangi bir cshtml dosyası içerisinde scripts kodları yazmak istersek bu kodlar buraya eklensin anlamında kullanılır. required ifadesini eğer true yaparsak bu layoutı kullanan cshtml gibi tüm sayfalar bu sectionları tanımlamak zorunda.best practice açısından false olmalı*@
+</body>
+</html>

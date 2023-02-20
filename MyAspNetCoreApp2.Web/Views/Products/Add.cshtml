@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+}
+
+@section css
+    {
+    <style type="text/css">
+
+        h1 {
+            color: red;
+        }
+        label {
+            color:blueviolet
+        }
+        button{
+            color : red;
+            background-color :yellow;
+            
+        }
+    </style>
+    }
+
+    @model Product
+<h1>ÜRÜN EKLEME</h1>
+
+
+
+@* datayı saveproducta göndermek içinformun içine tag helperlar yazdım*@
+<form asp-controller="Products" asp-action="Add" method="post">
+   @* id tanımlaması yapmadım çünkü id ile backend te bir taxtbox yakalayamam. bu yüzden mutlaka name attributu kullanmalıyım*@
+
+   <label>Ürün ismi :</label>
+    <input type="text" asp-for="Name"/>
+    <br/>
+    <br/>
+    <br/>
+    <label>Ürün fiyat :</label>
+    <input type="text" asp-for="Price"/>
+    <br/>
+    <br/>
+    <br/>
+    <label>Ürün stok :</label>
+    <input type="text" asp-for="Stock"/>
+    <br/>
+    <br/>
+    <br/>
+    <label>Ürün renk :</label>
+    <input type="text" asp-for="Color"/>
+    <br/>
+    <br/>
+    <br/>
+    <label>Ürün genişlik :</label>
+    <input type="text" asp-for="Width"/>
+    <br/>
+    <br/>
+    <br/>
+    <label>Ürün boy :</label>
+    <input type="text" asp-for="Height"/>
+    <br/>
+    <br/>
+    <button type="submit">ÜRÜN KAYDET</button>
+    
+</form>

@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "Update";
+}
+
+@section css
+    {
+        <style type="text/css">
+
+            h1 {
+                color:saddlebrown;
+            }
+            label {
+                color:blueviolet
+              
+            }
+            button{
+                color :green;
+                background-color :orangered;
+
+            }
+        </style>
+    }
+
+@model Product
+
+<h1>ÜRÜN GÜNCELLEME</h1>
+
+
+@* datayı saveproducta göndermek içinformun içine tag helperlar yazdım*@
+<form asp-controller="Products" asp-action="Update" method="post">
+    @* id tanımlaması yapmadım çünkü id ile backend te bir textbox yakalayamam. bu yüzden mutlaka name attributu kullanmalıyım*@
+
+    <label>Ürün ismi :</label>
+    <input type="hidden" asp-for="Id"/>
+    <input type="text" asp-for="Name" />
+    <br />
+    <br />
+    <br />
+    <label>Ürün fiyat :</label>
+    <input type="text" asp-for="Price" />
+    <br />
+    <br />
+    <br />
+    <label>Ürün stok :</label>
+    <input type="text" asp-for="Stock" />
+    <br />
+    <br />
+    <br />
+    <label>Ürün renk :</label>
+    <input type="text" asp-for="Color" />
+    <br />
+    <br />
+    <br />
+    <label>Ürün genişlik :</label>
+    <input type="text" asp-for="Width" />
+    <br />
+    <br />
+    <br />
+    <label>Ürün boy :</label>
+    <input type="text" asp-for="Height" />
+    <br />
+    <br />
+    <button type="submit">ÜRÜN GÜNCELLE</button>
+
+</form>
