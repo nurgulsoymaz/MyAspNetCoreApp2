@@ -1,7 +1,17 @@
-﻿@{
+﻿@using MyAspNetCoreApp2.Web
+@using Microsoft.AspNetCore.Mvc;
+@using MyAspNetCoreApp2.Web.Models
+@using MyAspNetCoreApp2.Web.ViewModels
+@using Microsoft.AspNetCore.Mvc.Filters;
+
+
+
+
+@{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
 <partial name="_MenuPartialView" />

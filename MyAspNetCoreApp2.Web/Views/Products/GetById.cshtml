@@ -1,0 +1,59 @@
+﻿@using MyAspNetCoreApp2.Web.Models;
+@using MyAspNetCoreApp2.Web.ViewModels
+@{
+    ViewData["Title"] = "GetById";
+}
+
+
+@section css
+    {
+        <style type="text/css">
+
+            h1
+            {
+                color: palevioletred;
+                background-color :slategray;
+                font-weight:600;
+
+            }
+            p
+      {
+                color: palevioletred;
+
+            }
+            a
+            {
+               color : dodgerblue;
+            }
+
+            </style>
+}
+
+
+
+<a class="btn btn-primary mb-2" asp-controller="products" asp-action="index">ürünler sayfasına dön</a>
+
+<h1>ÜRÜN DETAY</h1>
+
+@model Product
+
+
+<div class="card">
+    <div class="card-header">
+      
+
+        Ürün(@Model.Name)
+    </div>
+
+    <div class="card-body">
+        <p class="card-text">
+            <div>Id:@Model.Id</div>
+            <div>Açıklama: @Model.Description</div>
+            <div>Fiyat: @Model.Price</div>
+            <div>Stock: @Model.Stock</div>
+            <div>Renk: @Model.Color</div>
+            <div>Süre: @Model.Expire</div>
+
+        </p>
+    </div>
+</div>

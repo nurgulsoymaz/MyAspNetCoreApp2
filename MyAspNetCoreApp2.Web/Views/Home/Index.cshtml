@@ -1,6 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    //var alert = "bu bir uyarı mesajıdır";
+
 }
 
 
@@ -10,66 +10,56 @@
 
         h1
         {
-            color : red;
-            background-color :aqua;
+            color: purple;
+            background-color :slategray;
+            font-weight:600;
           
         }
+        p
+        {
+            color: palevioletred;
+
+        }
+        a
+        {
+           color : darkblue;
+        }
+      
         </style>
 }
 
-@*@section scripts
-
-{
-    <script type="text/javascript">
-        /*alert("welcome")*/
-            $(document).ready(function()
-            {
-                console.log("welcome to my page");
-
-            }
-    </script>
-
- }
-  *@
     <h1>MY WEBSİTE</h1>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <italic>my first experience with Asp.Net Core :)</italic>
+  
+    
+    <h1 class="display-4" >Welcome My First Project</h1>
+ 
 </div>
-<partial name="_MenuPartialView"/>
+<partial name="_MenuPartialView"/> @*//başka bir partialview kullanabiliiz*@
 
-@*<div>Günün tarihi : @DateTime.Now.ToShortDateString()</div>
 
-@{
+@section Scripts
+{
 
-    var datetime = DateTime.Now.ToShortDateString();
-    var message = "merhaba";
-
-    @: bugünün tarihi : @datetime
-    <div> mesaj :@message </div> //<text>bugünün tarihi :@datetime</text>
 
 }
 
-@if (1==1)
-{
-    <p>doğru</p>
+<div class="row">
+    <div class="col-md-10 align-content-md-center"> @*4 sütunu aldık*@
+@*klasör adı/dosya adı/ HomeConrollerdaki data yolu*@
+<partial name="~/PartialView/_ProductListPartialView.cshtml" model="@ViewBag.productListPartialViewModel" />
 
-}
-else if(DateTime.IsLeapYear(DateTime.Now.Year))
-{
-    <p>artık yıl</p>
-}
-else
-{
-    <h1>@alert</h1>
-    <p>yanlış</p>
-}
-@for(var i=0; i<10; i++)
-{
-<p>@i</p>
-}
-@foreach (var item in Enumerable.Range(1, 10).ToList())
-{
- <p>@item</p>
-}*@
+</div>
+
+</div>
+
+@*<div>
+<img src="/images/ziyaretci.jpg"/>
+<image-thumbnail image-src="images/ziyaretci.jpg"></image-thumbnail>
+</div>*@
+
+<div class="text-center">
+    <p>Learn about my website <a href="https://docs.microsoft.com/aspnet/core">The website was builded with ASP.NET Core</a>.</p>
+</div>

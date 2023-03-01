@@ -16,6 +16,42 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\NURGÜL\source\repos\MyAspNetCoreApp2\MyAspNetCoreApp2.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/PartialView/_ProductListPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFydGlhbFZpZXdcX1Byb2R1Y3RMaXN0UGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/AppSetting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwU2V0dGluZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Cookie/CookieCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29va2llXENvb2tpZUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Cookie/CookieRead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29va2llXENvb2tpZVJlYWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Example/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhhbXBsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Home/Visitor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWaXNpdG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Ornek/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JuZWtcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,12 +84,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Products/GetById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcR2V0QnlJZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Products/Pages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcUGFnZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Products/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Shared/Components/Visitor/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVmlzaXRvclxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Shared/Error.cshtml]
@@ -74,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/VisitorAjax/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlzaXRvckFqYXhcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/NURGÜL/source/repos/MyAspNetCoreApp2/MyAspNetCoreApp2.Web/Views/_ViewImports.cshtml]

@@ -7,21 +7,27 @@
     <style type="text/css">
 
         h1 {
-            color: red;          
+            color: purple;
+            font-weight: 200;
         }
         a {
-            color : red;
+            color : darkblue;
         }
         th {
             color :rebeccapurple;
         }
         table {
-            background-color :aqua;
+            background-color :lightgray;
+        }
+        td{
+            color :deeppink;
+            background-color :cornflowerblue;
+
         }
     </style>
 }
 
-@model List<Product>
+@model List<ProductViewModel>
 
 <h1>ÜRÜNLER</h1>
 
@@ -37,33 +43,63 @@
     <thead>
         <tr>
             <th>Id</th>
+            <th>Resim</th>
+            <th>Kategori</th>
             <th>İsim</th>
             <th>Fiyat</th>
             <th>Stock</th>
-            <th>Color</th>
-            <th>Width</th>
-            <th>Height</th>
+            <th>Renk</th>
+            <th>Genişlik</th>
+            <th>Yükseklik</th>
+            <th>Yayın durumu</th>
+            <th>ürün yayın tarihi</th>
+            <th>yayın süresi</th>
+            <th>Açıklama</th>
             <th>İşlem</th>
-           
+           <th></th>
         </tr>
     </thead>
 
     <tbody>
     @foreach( var item in Model)
 
-    {
-        <tr>
+    { 
+        <tr class="align-middle">
             <td>@item.Id</td>
+            <td>
+
+                @if(!String.IsNullOrEmpty(item.ImagePath))
+                {
+                    <img style="width:100px; height:100px" src="/images/@(item.ImagePath)"/>
+                }
+                else
+                {
+                    <img style="width:100px; height:100px" src="/images/urunyok.jpg" />
+                }
+
+                </td>
+                <td>
+                    @item.CategoryName
+            </td>
             <td>@item.Name</td>
             <td>@item.Price</td>
             <td>@item.Stock</td>
             <td>@item.Color</td>
             <td>@item.Width</td>
             <td>@item.Height</td>
-            
+            <td>@(item.IsPublish ? "Evet" : "Hayır")</td>
+            <td>@item.PublishDate</td>
+            <td>@item.Expire</td>
+            <td>@item.Description</td>
+           
                 <td><a asp-controller="products" asp-action="remove" asp-route-id="@item.Id">SİL</a></td>
                 <td><a asp-controller="products" asp-action="update" asp-route-id="@item.Id">GÜNCELLE</a></td>
+                <td><a asp-controller="products" asp-action="getbyid" asp-route-id="@item.Id">Detay</a></td>
         </tr>
     }
     </tbody>
 </table>
+
+           <a asp-controller="products" asp-action="pages" asp-route-page=1 asp-route-pagesize=3>1 sayfadan 3 ürün ver</a>
+
+            <a asp-controller="products" asp-action="pages" asp-route-page=2 asp-route-pagesize=3>2 sayfadan 3 ürün ver</a>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyAspNetCoreApp2.Web.Models;
 
 namespace MyAspNetCoreApp2.Web.Models
 {
@@ -12,5 +13,8 @@ namespace MyAspNetCoreApp2.Web.Models
         }
         //product tablomu entity olarak adlandıralım. bir dbset oluşturalım ve products sınıfını verelim. ve bunun hangi coonection stringe bağlanacağını program.cs de belirt.
         public DbSet<Product> Products { get; set; }
+        public DbSet<Visitor>Visitors { get; set; }
+
+        public DbSet<MyAspNetCoreApp2.Web.Models.Category> Category { get; set; }
     }
 }

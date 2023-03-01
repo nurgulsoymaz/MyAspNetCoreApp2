@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewData["Title"] = "Pages";
+}
+
+<h1>SAYFAM</h1>
+
+<h2>Sayfa : @ViewBag.page</h2>
+<h2>Sayfa numarası : @ViewBag.pageSize</h2>
+
+@model List<Product>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>İsim</th>
+            <th>Fiyat</th>
+            <th>Stock</th>
+            <th>Renk</th>
+            <th>Genişlik</th>
+            <th>Yükseklik</th>
+            <th>Yayın durumu</th>
+            <th>ürün yayın tarihi</th>
+            <th>yayın süresi</th>
+            <th>Açıklama</th>
+            <th>İşlem</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+                <td>@item.Color</td>
+                <td>@item.Width</td>
+                <td>@item.Height</td>
+                <td>@(item.IsPublish ? "Evet" : "Hayır")</td>
+                <td>@item.PublishDate</td>
+                <td>@item.Expire</td>
+                <td>@item.Description</td>
+
+                <td><a asp-controller="products" asp-action="remove" asp-route-id="@item.Id">SİL</a></td>
+                <td><a asp-controller="products" asp-action="update" asp-route-id="@item.Id">GÜNCELLE</a></td>
+                <td><a asp-controller="products" asp-action="getbyid" asp-route-id="@item.Id">Detay</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

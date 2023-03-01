@@ -1,0 +1,41 @@
+﻿@using MyAspNetCoreApp2.Web.Models
+@using Microsoft.Extensions.FileProviders;
+@using MyAspNetCoreApp2.Web.ViewModels;
+
+@model ProductListPartialViewModel
+
+
+<table class="table table-success table-striped">
+
+    <thead>
+        <tr>
+
+            <th>Id</th>
+            <th>İsim</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            @*<th>Resim</th>*@
+        
+
+
+        </tr>
+    </thead>
+
+    <tbody></tbody>
+
+    @foreach (var item in Model.Products)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Stock</td>
+           @* <td>@item.File</td>*@
+           
+
+           
+           
+        </tr>
+    }
+
+</table>

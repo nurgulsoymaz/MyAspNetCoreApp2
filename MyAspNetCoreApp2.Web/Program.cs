@@ -1,5 +1,9 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
+using MyAspNetCoreApp2.Web.Filters;
 using MyAspNetCoreApp2.Web.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +14,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlCon"));
 });
+
+builder.Services.AddSingleton<IFileProvider>(new PhysicalFileProvider(Directory.GetCurrentDirectory() ));
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly()); //auto mapper yüklendi
+
+builder.Services.AddScoped<NotFoundFilter>();
+
 
 var app = builder.Build();
 
@@ -27,6 +38,18 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "productpages",
+    pattern: "{controller=products}/{action=pages}/{page}/{pagesize}");
+
+
+
+
+
+
+
+
 
 app.MapControllerRoute(
     name: "default",

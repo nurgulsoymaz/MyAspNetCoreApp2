@@ -22,14 +22,39 @@
         </style>
     }
 
-@model Product
+@model ProductUpdateViewModel
 
 <h1>ÜRÜN GÜNCELLEME</h1>
 
 
 @* datayı saveproducta göndermek içinformun içine tag helperlar yazdım*@
-<form asp-controller="Products" asp-action="Update" method="post">
+<form asp-controller="Products" asp-action="Update" method="post" enctype="multipart/form-data">
     @* id tanımlaması yapmadım çünkü id ile backend te bir textbox yakalayamam. bu yüzden mutlaka name attributu kullanmalıyım*@
+
+    <input type="hidden" asp-for="Id"/>
+    <input type="hidden" asp-for="ImagePath" />
+   
+
+
+
+
+    <div>
+        
+
+        @if (!String.IsNullOrEmpty(Model.ImagePath))
+        {
+            <img style="width:100px; height:100px" src="/images/@(Model.ImagePath)" />
+        }
+        else
+        {
+            <img style="width:100px; height:100px" src="/images/urunyok.jpg" />
+        }
+
+    </div>
+
+
+
+
 
     <label>Ürün ismi :</label>
     <input type="hidden" asp-for="Id"/>
@@ -47,8 +72,7 @@
     <br />
     <br />
     <br />
-    <label>Ürün renk :</label>
-    <input type="text" asp-for="Color" />
+   
     <br />
     <br />
     <br />
@@ -61,6 +85,33 @@
     <input type="text" asp-for="Height" />
     <br />
     <br />
-    <button type="submit">ÜRÜN GÜNCELLE</button>
+
+    <div class="mb-3">
+        @* <label asp-for="Color" class="form-label">Renk bilgisi</label>
+        <input class="form-control" asp-for="Color">*@
+        <select class="form-select" asp-for="Color" asp-items="@ViewBag.ColorSelect">
+            <option value="">Renk seçiniz</option>
+            @*  @Html.ValidationMessageFor(x => x.Name, "*Bu alanı doldurmak zorunludur", new { @style = "color:red" })*@
+            <span class="text-danger" asp-validation-for="Color"></span> @*required validation için bir uyarı mesajı eklendi*@
+        </select>
+    </div>
+
+    <div class="mb-3">
+
+        <select class="form-select" asp-for="CategoryId" asp-items="@ViewBag.categorySelect">
+            <option value="">Kategori seçiniz</option>
+
+            <span class="text-danger" asp-validation-for="CategoryId"></span>
+
+        </select>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="formfilelg" class="form-label">ürün resim</label>
+        <input class="form-control form-control-lg" asp-for="Image" type="file" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">ÜRÜN GÜNCELLE</button>
 
 </form>
